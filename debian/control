@@ -6,7 +6,7 @@ Uploaders: Apollon Oikonomopoulos <apoikos@debian.org>,
            Prach Pongpanich <prach@debian.org>,
            Vincent Bernat <bernat@debian.org>
 Standards-Version: 4.4.1
-Build-Depends: debhelper-compat (= 12),
+Build-Depends: debhelper-compat (= 11),
                libpcre2-dev,
                libssl-dev,
                liblua5.3-dev,
