@@ -12,7 +12,6 @@ Build-Depends: debhelper-compat (= 12),
                liblua5.3-dev,
                libsystemd-dev [linux-any],
                python3-sphinx,
-               libopentracing-c-wrapper-dev,
                pkg-config
 Build-Depends-Indep: python3, python3-mako
 Homepage: http://www.haproxy.org/
