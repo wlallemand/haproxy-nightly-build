@@ -8,7 +8,7 @@ Uploaders: Apollon Oikonomopoulos <apoikos@debian.org>,
 Standards-Version: 4.4.1
 Build-Depends: debhelper-compat (= 11),
                libpcre2-dev,
-               libssl-dev,
+               libssl-dev (>= 1.1.1),
                liblua5.3-dev,
                libsystemd-dev [linux-any],
                python3-sphinx,
