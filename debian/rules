@@ -44,29 +44,16 @@ MAKEARGS += SUBVERS="-$(lastword $(subst -, ,$(DEB_VERSION)))"
 MAKEARGS += VERDATE="$(shell TZ=UTC date -d "@$(SOURCE_DATE_EPOCH)" "+%Y/%m/%d")"
 
 %:
-	dh $@ --with sphinxdoc
+	dh $@
 
 override_dh_auto_configure:
 
 override_dh_auto_build-arch:
 	make $(MAKEARGS)
 	make -C admin/systemd $(MAKEARGS)
-	$(MAKE) -C doc/lua-api man
-
-override_dh_auto_build-indep:
-	# Build the HTML documentation, after patching dconv
-	patch -p1 < $(CURDIR)/debian/patches/debianize-dconv.patch
-	for doc in intro configuration management; do \
-		python3 -B $(CURDIR)/debian/dconv/haproxy-dconv.py \
-			-i $(CURDIR)/doc/$${doc}.txt \
-			-o $(CURDIR)/doc/$${doc}.html ;\
-	done
-	patch -p1 -R < $(CURDIR)/debian/patches/debianize-dconv.patch
-	$(MAKE) -C doc/lua-api html
 
 override_dh_auto_clean:
 	make -C admin/systemd clean
-	$(MAKE) -C doc/lua-api clean
 	dh_auto_clean
 
 override_dh_auto_install-arch:
