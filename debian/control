@@ -12,7 +12,8 @@ Build-Depends: debhelper-compat (= 11),
                liblua5.3-dev,
                libsystemd-dev [linux-any],
                python3-sphinx,
-               pkg-config
+               pkg-config,
+	       libssl-awslc-dev
 Build-Depends-Indep: python3, python3-mako
 Homepage: http://www.haproxy.org/
 Vcs-Git: https://salsa.debian.org/haproxy-team/haproxy.git
@@ -20,7 +21,7 @@ Vcs-Browser: https://salsa.debian.org/haproxy-team/haproxy
 
 Package: haproxy
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, adduser, lsb-base (>= 3.0-6)
+Depends: ${shlibs:Depends}, ${misc:Depends}, adduser, lsb-base (>= 3.0-6), libssl-awslc
 Pre-Depends: dpkg (>= 1.17.14), ${misc:Pre-Depends}
 Suggests: vim-haproxy, haproxy-doc
 Description: fast and reliable load balancing reverse proxy
