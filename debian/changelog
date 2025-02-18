@@ -1,3 +1,10 @@
+haproxy (3.2-dev5-1ubuntu1) noble; urgency=medium
+
+  [ William Lallemand ]
+  * Rename package version to 3.2-dev5
+
+ -- William Lallemand <wlallemand@irq6.net>  Tue, 18 Feb 2025 23:51:24 +0100
+
 haproxy (2.5.3-1) experimental; urgency=medium
 
   * New upstream release.

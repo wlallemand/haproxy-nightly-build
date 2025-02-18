@@ -1,2 +1,2 @@
 REPOSITORY=https://github.com/haproxy/haproxy/
-VERSION=master
+VERSION=v3.2-dev5
