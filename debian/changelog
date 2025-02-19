@@ -1,3 +1,9 @@
+haproxy (3.2-dev6-1ubuntu1) noble; urgency=medium
+
+  * Upgrade to upstream 3.2-dev6
+
+ -- William Lallemand <wlallemand@irq6.net>  Wed, 19 Feb 2025 21:27:37 +0100
+
 haproxy (3.2-dev5-1ubuntu1) noble; urgency=medium
 
   [ William Lallemand ]
